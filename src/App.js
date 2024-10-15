@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import { DefaultLayout } from "./Layouts";
 import { Home } from "./Pages";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   const router = createBrowserRouter(
@@ -14,6 +16,8 @@ function App() {
       <>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<Home />}></Route>
+          <Route path="/about/*" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
         </Route>
       </>
     )
